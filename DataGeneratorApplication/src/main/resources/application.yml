@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: DataGeneratorApplication
+
+socket:
+  host: localhost
+  port: 9999
+
+logging:
+  level:
+    root: INFO
+    com.demo.datageneratorapplication: DEBUG

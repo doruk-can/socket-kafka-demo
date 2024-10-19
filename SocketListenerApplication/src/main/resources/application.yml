@@ -1,0 +1,27 @@
+spring:
+  application:
+    name:
+      SocketListenerApplication
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVERS:localhost:29092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+
+logging:
+  level:
+    root: INFO
+    com.demo.socketlistenerapplication: DEBUG
+
+server:
+  port: 8081
+
+socket:
+  port: 9999
+
+file:
+  output: data/output.txt
+
+topic:
+  data-topic: data-topic
